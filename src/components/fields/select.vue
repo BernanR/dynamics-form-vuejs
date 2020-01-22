@@ -2,16 +2,17 @@
     <div class="content-dyn-form"> 
         <label :for="item.id">{{item.label}}</label>
         <select class="form-control" :name="item.id" :id="item.id" v-model="item.value">
-            <option value="" selected >- Selecione -</option>
+            <option value="" disabled >Seleciona um item...</option>
             <option :key="i" v-for="(option,i) in item.options" v-bind:value="option.value" >
                 {{option.label}}
             </option>
         </select>
+        {{item.value}}
     </div>
 </template>
 
 <script>
-    export default {
+    export default {        
         props : {
             item : {
                 type : Object,

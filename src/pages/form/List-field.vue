@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid">
-        <h1>Form dynamic</h1>
+        <h1>Dynamic Form</h1>
         <div>
             <form-content :form="form"></form-content>
         </div>
@@ -23,6 +23,7 @@
                         id : 'console_01',
                         field : 'select',
                         label : "Consoles",
+                        value : "",
                         options : [{value:1,label:'Play Station'},{value:2, label: "x-box"}],
                         rules : {}
                     },
