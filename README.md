@@ -1,4 +1,4 @@
-# series-wished
+# DYNAMICS FORM
 
 ## Project setup
 ```
@@ -18,6 +18,11 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+### node version
+```
+v10.16.3
 ```
 
 ### Customize configuration
