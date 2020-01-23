@@ -25,7 +25,13 @@
                         label : "Consoles",
                         value : "",
                         options : [{value:1,label:'Play Station'},{value:2, label: "x-box"}],
-                        rules : {}
+                        show : true,
+                        has_rule : true,
+                        rules : {
+                            condition : ">=",
+                            up_field: "console_02",
+                            action : "hide"
+                        }
                     },
                     {
                         id : 'console_02',
@@ -33,6 +39,7 @@
                         label : "O que você mais gosta de fazer?",
                         rows : 5,
                         cols : 35,
+                        show : true,
                         rules : {}
                     },
                     {
@@ -42,7 +49,7 @@
                         label : "Quantos Anos você tem?",
                         rows : 5,
                         cols : 35,
-                        rules : {}
+                        show : true
                     },
                     {
                         id : 'console_04',
@@ -51,7 +58,12 @@
                         label : "Qual seu nome?",
                         rows : 5,
                         cols : 35,
-                        rules : {}
+                        show : false,
+                        rules : {
+                            condition : ">=",
+                            up_field: "console_02",
+                            action : "hide"
+                        }
                     }
                 ]
             }

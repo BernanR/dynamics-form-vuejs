@@ -6,7 +6,7 @@
                     formulario:
                     <ul id="example-1">
                         <li :key="i" v-for="(field,i) in form">               
-                            <component :is="field.field + 'Field'" :item="field"></component>
+                            <component v-if="field.show" :is="field.field + 'Field'" :item="field"></component>
                         </li>
                     </ul>
                     <button type="button" @click="salveForm" class="btn btn-primary" >Enviar pesquisa</button>
@@ -23,6 +23,11 @@
     import inputField from './fields/input'
 
     export default{
+        data(){
+            return {
+                form_root : this.form
+            }
+        },
         components : {
             selectField,
             texteareaField,
