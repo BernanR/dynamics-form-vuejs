@@ -6,7 +6,7 @@
                     formulario:
                     <ul id="example-1">
                         <li :key="i" v-for="(field,i) in form">               
-                            <component v-if="field.show" :is="field.field + 'Field'" :item="field"></component>
+                            <component :is="field.field + 'Field'" :item="field"></component>
                         </li>
                     </ul>
                     <button type="button" @click="salveForm" class="btn btn-primary" >Enviar pesquisa</button>
